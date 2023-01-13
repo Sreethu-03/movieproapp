@@ -1,0 +1,45 @@
+<center>
+{% extends 'base.html' %}
+{% block body %}
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+<img src="{{movie.img.url}}" width="500" height="500">
+            </div>
+
+            <div class="col-md-6">
+                <br>
+                <br>
+           <h1> {{movie.name}}</h1>
+                <br>
+                <br>
+           <h4> {{movie.desc}}</h4>
+                <br>
+                <br>
+           <h4> {{movie.year}}</h4>
+                <br>
+                <br>
+
+<a class="btn btn-warning" href="{% url 'movieapp:update' movie.id %}">
+    UPDATE
+</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a class="btn btn-danger" href="{% url 'movieapp:delete' movie.id %}">
+    DELETE
+</a>
+            </div>
+        </div>
+</div>
+{% endblock %}
+</center>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
